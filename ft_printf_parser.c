@@ -60,7 +60,7 @@ void	parse_p(t_tab *tab, unsigned long num, const char *str)
 	while (!tab->mns && tab->wdt--)
 		tab->len += write(1, " ", 1);
 	if (num != 0)
-	tab->len += write(1, "0x", 2);
+		tab->len += write(1, "0x", 2);
 	util_putnbr(tab, num, base, str);
 	while (tab->mns && tab->wdt--)
 		tab->len += write(1, " ", 1);
